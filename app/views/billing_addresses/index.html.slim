@@ -1,0 +1,35 @@
+h1 Listing billing_addresses
+
+table
+  thead
+    tr
+      th User
+      th Address 1
+      th Address 2
+      th City
+      th State
+      th Country
+      th Postal code
+      th Stripe data
+      th
+      th
+      th
+
+  tbody
+    - @billing_addresses.each do |billing_address|
+      tr
+        td = billing_address.user
+        td = billing_address.address_1
+        td = billing_address.address_2
+        td = billing_address.city
+        td = billing_address.state
+        td = billing_address.country
+        td = billing_address.postal_code
+        td = billing_address.stripe_data
+        td = link_to 'Show', billing_address
+        td = link_to 'Edit', edit_billing_address_path(billing_address)
+        td = link_to 'Destroy', billing_address, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Billing address', new_billing_address_path

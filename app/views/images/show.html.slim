@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong User:
+  = @image.user
+p
+  strong Default:
+  = @image.default
+p
+  strong Route:
+  = @image.route
+
+= link_to 'Edit', edit_image_path(@image)
+'|
+= link_to 'Back', images_path

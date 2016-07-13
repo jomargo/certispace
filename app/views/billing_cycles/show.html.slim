@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong User:
+  = @billing_cycle.user
+p
+  strong Plan:
+  = @billing_cycle.plan
+p
+  strong Date issued:
+  = @billing_cycle.date_issued
+p
+  strong Amount issued:
+  = @billing_cycle.amount_issued
+
+= link_to 'Edit', edit_billing_cycle_path(@billing_cycle)
+'|
+= link_to 'Back', billing_cycles_path

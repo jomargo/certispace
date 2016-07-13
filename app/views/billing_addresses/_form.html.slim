@@ -1,0 +1,15 @@
+= simple_form_for(@billing_address) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :user
+    = f.input :address_1
+    = f.input :address_2
+    = f.input :city
+    = f.input :state
+    = f.input :country
+    = f.input :postal_code
+    = f.input :stripe_data
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  template_id: 
+  students_count: 1
+  tags: 
+
+two:
+  user_id: 
+  template_id: 
+  students_count: 1
+  tags: 

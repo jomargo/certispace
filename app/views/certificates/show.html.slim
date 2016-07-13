@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong User:
+  = @certificate.user
+p
+  strong Template:
+  = @certificate.template
+p
+  strong Students count:
+  = @certificate.students_count
+p
+  strong Tags:
+  = @certificate.tags
+
+= link_to 'Edit', edit_certificate_path(@certificate)
+'|
+= link_to 'Back', certificates_path

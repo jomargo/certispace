@@ -1,0 +1,55 @@
+h1 Listing base_templates
+
+table
+  thead
+    tr
+      th Html file
+      th Background
+      th Logo
+      th Img 1
+      th Img 2
+      th Img 3
+      th Img 4
+      th Img 5
+      th Text 1
+      th Text 2
+      th Text 3
+      th Text 4
+      th Text 5
+      th Text 6
+      th Text 7
+      th Text 8
+      th Text 9
+      th Text 10
+      th
+      th
+      th
+
+  tbody
+    - @base_templates.each do |base_template|
+      tr
+        td = base_template.html_file
+        td = base_template.background
+        td = base_template.logo
+        td = base_template.img_1
+        td = base_template.img_2
+        td = base_template.img_3
+        td = base_template.img_4
+        td = base_template.img_5
+        td = base_template.text_1
+        td = base_template.text_2
+        td = base_template.text_3
+        td = base_template.text_4
+        td = base_template.text_5
+        td = base_template.text_6
+        td = base_template.text_7
+        td = base_template.text_8
+        td = base_template.text_9
+        td = base_template.text_10
+        td = link_to 'Show', base_template
+        td = link_to 'Edit', edit_base_template_path(base_template)
+        td = link_to 'Destroy', base_template, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Base template', new_base_template_path

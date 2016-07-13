@@ -1,0 +1,27 @@
+h1 Listing certificates
+
+table
+  thead
+    tr
+      th User
+      th Template
+      th Students count
+      th Tags
+      th
+      th
+      th
+
+  tbody
+    - @certificates.each do |certificate|
+      tr
+        td = certificate.user
+        td = certificate.template
+        td = certificate.students_count
+        td = certificate.tags
+        td = link_to 'Show', certificate
+        td = link_to 'Edit', edit_certificate_path(certificate)
+        td = link_to 'Destroy', certificate, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Certificate', new_certificate_path

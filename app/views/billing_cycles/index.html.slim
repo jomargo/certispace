@@ -1,0 +1,27 @@
+h1 Listing billing_cycles
+
+table
+  thead
+    tr
+      th User
+      th Plan
+      th Date issued
+      th Amount issued
+      th
+      th
+      th
+
+  tbody
+    - @billing_cycles.each do |billing_cycle|
+      tr
+        td = billing_cycle.user
+        td = billing_cycle.plan
+        td = billing_cycle.date_issued
+        td = billing_cycle.amount_issued
+        td = link_to 'Show', billing_cycle
+        td = link_to 'Edit', edit_billing_cycle_path(billing_cycle)
+        td = link_to 'Destroy', billing_cycle, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Billing cycle', new_billing_cycle_path

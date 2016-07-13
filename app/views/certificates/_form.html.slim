@@ -1,0 +1,11 @@
+= simple_form_for(@certificate) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :user
+    = f.association :template
+    = f.input :students_count
+    = f.input :tags
+
+  .form-actions
+    = f.button :submit

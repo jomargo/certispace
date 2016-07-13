@@ -1,0 +1,11 @@
+= simple_form_for(@billing_cycle) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :user
+    = f.association :plan
+    = f.input :date_issued
+    = f.input :amount_issued
+
+  .form-actions
+    = f.button :submit

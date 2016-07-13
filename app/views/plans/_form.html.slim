@@ -1,0 +1,9 @@
+= simple_form_for(@plan) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :monthly_certs
+    = f.input :price
+
+  .form-actions
+    = f.button :submit

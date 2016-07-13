@@ -1,0 +1,57 @@
+h1 Listing templates
+
+table
+  thead
+    tr
+      th Certificate
+      th Base template
+      th Background
+      th Logo
+      th Img 1
+      th Img 2
+      th Img 3
+      th Img 4
+      th Img 5
+      th Text 1
+      th Text 2
+      th Text 3
+      th Text 4
+      th Text 5
+      th Text 6
+      th Text 7
+      th Text 8
+      th Text 9
+      th Text 10
+      th
+      th
+      th
+
+  tbody
+    - @templates.each do |template|
+      tr
+        td = template.certificate
+        td = template.base_template
+        td = template.background
+        td = template.logo
+        td = template.img_1
+        td = template.img_2
+        td = template.img_3
+        td = template.img_4
+        td = template.img_5
+        td = template.text_1
+        td = template.text_2
+        td = template.text_3
+        td = template.text_4
+        td = template.text_5
+        td = template.text_6
+        td = template.text_7
+        td = template.text_8
+        td = template.text_9
+        td = template.text_10
+        td = link_to 'Show', template
+        td = link_to 'Edit', edit_template_path(template)
+        td = link_to 'Destroy', template, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Template', new_template_path
